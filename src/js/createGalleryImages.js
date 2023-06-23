@@ -2,7 +2,7 @@ export { createGalleryImages }
 
 const gallery = document.querySelector('.gallery');
 function createGalleryImages(images) {
-    const propertyList = images.map(
+    const galleryMarkup = images.map(
         ({
             webformatURL,
             largeImageURL,
@@ -12,7 +12,7 @@ function createGalleryImages(images) {
             comments,
             downloads,
         }) => {
-            return `<a class="gallery__link" href="${largeImageURL}">;
+            return `<a class="gallery__link" href="${largeImageURL}">
             <div class="photo-card">
                 <img src="${webformatURL}" alt="${tags}" loading="lazy" />
                 <div class="info">
@@ -23,7 +23,6 @@ function createGalleryImages(images) {
               </div>
             </div>;
             </a>`;
-        }
-    ).join('');
-    gallery.insertAdjacentHTML('beforeend', propertyList);
+        }).join('');
+    gallery.insertAdjacentHTML('beforeend', galleryMarkup);
 }    
