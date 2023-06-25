@@ -83,7 +83,7 @@ img {
     padding: 12px 15px;
 }
 
-.gallery{
+.gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
