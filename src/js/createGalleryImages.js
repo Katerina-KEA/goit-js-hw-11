@@ -1,5 +1,6 @@
 export { createGalleryImages }
 
+// function for create markup
 const gallery = document.querySelector('.gallery');
 function createGalleryImages(images) {
     const galleryMarkup = images.map(
